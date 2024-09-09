@@ -1,1 +1,230 @@
-/* You can add global styles to this file, and also import other style files */
+/**************************************/
+/*             RESET               */
+/**************************************/
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+/**************************************/
+/*             IMPORTS                */
+/**************************************/
+
+/*               FONT               */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+/*               ICONS               */
+
+@import url('./assets/fonts/icons/style.css');
+
+
+/**************************************/
+/*          GLOBAL COLORS        */
+/**************************************/
+
+//principal colors
+
+$blue-general: #0E6EB9;
+$Blue-emphasis: #2B2B65;
+$magenta-support: #9A1764;
+$white-base: #ffffff;
+
+//complement colors
+
+$Green-support: #94C11F;
+$Blue-support: #2DA4DC;
+$Yellow-Support: #F7A521;
+$Terracotta-Support: #D63420;
+$magenta-suport_ligth: #CD8BB2;
+
+//grays complemnts
+
+$Gray-input_container: #D2D2D2;
+$Gray-place_holder: #B2B2B2;
+$Gray-placeholder_hover: #606060;
+
+
+/**************************************/
+/*               FONTS               */
+/**************************************/
+
+/*               HEADINGS               */
+
+//Heading-Xxlarge / H1
+
+$font-h1_sm : 36px; 
+$font-h1_md: 36px; 
+$font-h1_lg: 48px; 
+$font-h1_xl: 48px; 
+$font-h1_2xl: 60px; 
+
+//Heading-xlarge / H2
+
+$font-h2_sm : 30px; 
+$font-h2_md: 30px; 
+$font-h2_lg: 36px; 
+$font-h2_xl: 36px; 
+$font-h2_2xl: 48px; 
+
+//Heading-xlarge / H2
+
+$font-h2_sm : 30px; 
+$font-h2_md: 30px; 
+$font-h2_lg: 36px; 
+$font-h2_xl: 36px; 
+$font-h2_2xl: 48px;
+
+//Heading-large / H3
+
+$font-h3_sm : 20px; 
+$font-h3_md: 24px; 
+$font-h3_lg: 24px; 
+$font-h3_xl: 30px; 
+$font-h3_2xl: 36px;
+
+//Heading-standar / H4
+
+$font-h4_sm : 20px; 
+$font-h4_md: 20px; 
+$font-h4_lg: 24px; 
+$font-h4_xl: 24px; 
+$font-h4_2xl: 30px;
+
+//Heading-standar / H5
+
+$font-h5_sm : 16px; 
+$font-h5_md: 18px; 
+$font-h5_lg: 20px; 
+$font-h5_xl: 20px; 
+$font-h5_2xl: 24px;
+
+//Heading-standar / H6
+
+$font-h6_sm : 12px; 
+$font-h6_md: 14px; 
+$font-h6_lg: 14px; 
+$font-h6_xl: 14px; 
+$font-h6_2xl: 16px;
+
+/*             PARAGRAPHS              */
+
+//Regular-paragraph / P1
+
+$font-p1_sm : 12px; 
+$font-p1_md: 14px; 
+$font-p1_lg: 14px; 
+$font-p1_xl: 14px; 
+$font-p1_2xl: 16px;
+
+//xlarge-paragraph / P2
+
+$font-p2_sm : 14px; 
+$font-p2_md: 16px; 
+$font-p2_lg: 16px; 
+$font-p2_xl: 16px; 
+$font-p2_2xl: 16px;
+
+/*               WEIGHT               */
+
+@mixin font-style($weight: regular) {
+    @if $weight == semibold {
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        font-weight: 600;  /* semiboldbold */
+    } @else if $weight == regular {
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        font-weight: 400;  /* bold */
+    } @else {
+      font-weight: $weight; /* custom */
+    }
+  }
+
+/**************************************/
+/*               BUTTONS               */
+/**************************************/
+
+/*             Regular-button          */
+
+@mixin Regular-button( $paddingt: 8px, $padding-l:20px, $border-radius: 25px) {
+    background-color: $blue-general;
+    color: $white-base;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: $border-radius;
+    border: solid 2px;
+    cursor: pointer;
+    font-size: font-p1_lg;
+    @include font-style(semibold);
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: $Blue-emphasis;
+      color: $white-base;
+      outline: none;
+    }
+  
+
+  }
+
+/*       Regular-button-variant_stroke          */
+
+@mixin Regular-button-variant_stroke( $paddingt: 8px, $padding-l:20px, $border-radius: 25px) {
+    margin-top: 8px;
+    background-color: $white-base;
+    color: $blue-general;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: $border-radius;
+    border: solid 2px;
+    cursor: pointer;
+    font-size: font-p1_lg;
+    @include font-style(semibold);
+    transition: background-color 0.3s ease;
+  
+    &:hover {
+      background-color: $blue-general;
+      color: $white-base;
+      outline: none;
+    }
+  
+
+  }
+
+
+/**************************************/
+/*          BRAKE POINTS              */
+/**************************************/
+
+$sm : 640px; // Móviles
+$md: 768px; // Tablets
+$lg: 1024px; // Escritorios pequeños
+$xl: 1280px; // Escritorios grandes
+$_2xl: 1536px; // Pantallas
+
+//media Querys
+
+@mixin respond-to($size) {
+
+    @if $size == small {
+        @media (max-width: $sm) { @content; }
+    } @else if $size == medium {
+        @media (max-width: $md) { @content; }
+    } @else if $size == large {
+        @media (max-width: $lg) { @content; }
+    } @else if $size == xlarge {
+        @media (max-width: $xl) { @content; }
+    } @else if $size == xxlarge {
+        @media (max-width: $_2xl) { @content; }
+    }
+
+}

@@ -1,0 +1,50 @@
+@use '../../styles.scss' as *;
+
+header{
+    background-color: $white-base;
+    box-shadow: 0px 4px 20.2px 0px rgba(0, 0, 0, 0.25);
+    padding-right: 5rem;
+    padding-left: 5rem;
+    padding-top: 1.2rem;
+    padding-bottom: 1rem;
+    font-size: $font-p1_xl;
+    @include font-style(regular);
+    position: fixed;
+    width: 100%;
+
+    .nav{
+        display: flex;
+        justify-content: space-between; 
+        align-items: center;
+    }
+    
+    .nav-left{
+        display: flex;
+        align-items: center;
+        gap: 2rem; 
+
+        .link_a{
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+    }
+    .nav-options{
+        display: flex;
+        gap: 2rem;
+
+        .Regular-button-variant_stroke{
+            @include Regular-button-variant_stroke(); // Botón blanco con borde azul
+        }
+
+        .Regular-button{
+            @include Regular-button(); // Botón azul con texto blanco
+            text-decoration: none;
+        }
+    }
+    
+    .menu{
+        display: none;
+    }
+}
+
